@@ -32,7 +32,7 @@ class FilterActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
 
 
         // Botón de cancelar los filtros
-        binding.botonEliminar.setOnClickListener {
+        binding.cancelButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
