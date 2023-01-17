@@ -1,6 +1,7 @@
 package com.example.facturas1
 
 import android.content.ClipData.Item
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -43,12 +44,15 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        binding.botonFactura.setOnClickListener {
+            startActivity(Intent(this, FilterActivity::class.java))
+        }
 
-        binding.botonFactura.setOnClickListener{
+        /*binding.botonFactura.setOnClickListener{
             val dialog = DetailActivity()
 
             dialog.show(supportFragmentManager, "customDialog")
-        }
+        }*/
 
         /*binding.botonFactura.setOnClickListener {
             PopupActivity(
