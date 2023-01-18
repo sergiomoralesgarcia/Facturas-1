@@ -48,10 +48,33 @@ class DetailActivity: DialogFragment() {
         builder.create()
     }*/
 }
+class Constants {
+    companion object {
+        const val FACTURE_TITLE_KEY = "FACTURE_TITLE_KEY"
+        const val FACTURE_DATE_KEY = "FACTURE_DATE_KEY"
+        const val FACTURE_CONTENT_KEY = "FACTURE_CONTENT_KEY"
+    }
+}
 
 class PopupActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
+
+    var title: String? = null
+    var content: String? = null
+    var close: String? = null
+
+    companion object {
+        @JvmStatic
+        fun start(context: Context, title: String, content: String, close: String) {
+            val starter = Intent(context, DetailActivity::class.java)
+                .putExtra(Constants.FACTURE_TITLE_KEY, title)
+                .putExtra(Constants.FACTURE_DATE_KEY, content)
+                .putExtra(Constants.FACTURE_CONTENT_KEY, close)
+            context.startActivity(starter)
+        }
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
