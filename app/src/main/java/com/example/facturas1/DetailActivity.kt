@@ -33,7 +33,6 @@ class DetailActivity: DialogFragment() {
     ): View? {
         var rootView: View = inflater.inflate(R.layout.activity_detail, container, false)
 
-
         return rootView
     }
 
