@@ -1,27 +1,14 @@
 package com.example.facturas1
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.ArgbEvaluator
-import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import android.provider.SyncStateContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.DecelerateInterpolator
 import android.widget.Button
-import androidx.core.graphics.ColorUtils
 import androidx.fragment.app.DialogFragment
-import androidx.sqlite.db.SupportSQLiteCompat.Api16Impl.cancel
 import com.example.facturas1.databinding.ActivityDetailBinding
 
 class DetailActivity: DialogFragment() {
@@ -45,6 +32,8 @@ class DetailActivity: DialogFragment() {
             dismiss()
         }
     }
+
+
 
     /*val alertDialog: AlertDialog? = activity?.let {
         val builder = AlertDialog.Builder(it)

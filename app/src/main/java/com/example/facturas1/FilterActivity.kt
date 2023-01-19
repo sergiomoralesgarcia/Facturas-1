@@ -1,22 +1,11 @@
 package com.example.facturas1
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.ArgbEvaluator
-import android.animation.ValueAnimator
-import android.app.Activity
 import android.app.DatePickerDialog
-import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowManager
-import android.view.animation.DecelerateInterpolator
 import android.widget.SeekBar
 import android.widget.TextView
-import androidx.core.graphics.ColorUtils
-import com.example.facturas1.databinding.ActivityDetailBinding
 import com.example.facturas1.databinding.ActivityFilterBinding
 import java.util.*
 

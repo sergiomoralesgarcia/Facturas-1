@@ -1,20 +1,12 @@
 package com.example.facturas1
 
-import android.content.ClipData.Item
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.facturas1.database.AppDatabase
 import com.example.facturas1.databinding.ActivityMainBinding
-import com.example.facturas1.databinding.ItemFacturaBinding
 import com.example.facturas1.entidades.Factura
 
-@Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adaptador: AppAdapter
@@ -44,7 +36,6 @@ class MainActivity : AppCompatActivity() {
             FacturaList.setHasFixedSize(true)
         }
 
-
         binding.botonFactura.setOnClickListener {
             startActivity(Intent(this, FilterActivity::class.java))
         }
@@ -61,14 +52,6 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(requireContext(), "fFFFFF", Toast.LENGTH_SHORT).show()
                 }
             ).show(supportFragmentManager, "dialog" )
-        }*/
-
-        /*val button: Button = findViewById(com.google.android.material.R.id.container)
-
-        button.setOnClickListener{
-            val dialog = DetailActivity()
-
-            dialog.show(supportFragmentManager, "customDialog")
         }*/
     }
 }
