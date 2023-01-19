@@ -18,6 +18,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
+import android.widget.Button
 import androidx.core.graphics.ColorUtils
 import androidx.fragment.app.DialogFragment
 import androidx.sqlite.db.SupportSQLiteCompat.Api16Impl.cancel
@@ -32,7 +33,18 @@ class DetailActivity: DialogFragment() {
     ): View? {
         var rootView: View = inflater.inflate(R.layout.activity_detail, container, false)
 
+
         return rootView
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val button: Button = view.findViewById(R.id.botonPopup)
+
+        button.setOnClickListener{
+            dismiss()
+        }
     }
 
     /*val alertDialog: AlertDialog? = activity?.let {
@@ -76,7 +88,7 @@ class PopupActivity : AppCompatActivity() {
     }
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
@@ -86,5 +98,5 @@ class PopupActivity : AppCompatActivity() {
         binding.botonPopup.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
-    }
+    }*/
 }

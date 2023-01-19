@@ -4,6 +4,9 @@ import android.content.ClipData.Item
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.facturas1.database.AppDatabase
@@ -37,10 +40,8 @@ class MainActivity : AppCompatActivity() {
         adaptador = AppAdapter(datos)
 
         with(binding){
-
             FacturaList.adapter = adaptador
             FacturaList.setHasFixedSize(true)
-
         }
 
 
@@ -62,5 +63,12 @@ class MainActivity : AppCompatActivity() {
             ).show(supportFragmentManager, "dialog" )
         }*/
 
+        /*val button: Button = findViewById(com.google.android.material.R.id.container)
+
+        button.setOnClickListener{
+            val dialog = DetailActivity()
+
+            dialog.show(supportFragmentManager, "customDialog")
+        }*/
     }
 }
