@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.facturas1.databinding.ItemFacturaBinding
 import com.example.facturas1.entidades.Factura
 
-class AppAdapter (val datos: MutableList<Factura>): RecyclerView.Adapter<AppAdapter.AppHolder>(){
+class AppAdapter (var datos: MutableList<Factura>): RecyclerView.Adapter<AppAdapter.AppHolder>(){
 
     private lateinit var mListener: OnItemClickListener
 
@@ -19,6 +19,8 @@ class AppAdapter (val datos: MutableList<Factura>): RecyclerView.Adapter<AppAdap
     fun setOnItemClickListener (listener: OnItemClickListener){
         mListener = listener
     }
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppHolder {
         val inflador = LayoutInflater.from(parent.context)
@@ -61,5 +63,10 @@ class AppAdapter (val datos: MutableList<Factura>): RecyclerView.Adapter<AppAdap
                 listener.onItemClick(adapterPosition)
             }
         }*/
+    }
+
+    fun updateFacturas(datos: MutableList<Factura>){
+        this.datos = datos
+        notifyDataSetChanged()
     }
 }

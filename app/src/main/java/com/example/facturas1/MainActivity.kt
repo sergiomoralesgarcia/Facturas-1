@@ -3,6 +3,9 @@ package com.example.facturas1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.CheckBox
+import androidx.core.widget.addTextChangedListener
 import com.example.facturas1.database.AppDatabase
 import com.example.facturas1.databinding.ActivityMainBinding
 import com.example.facturas1.entidades.Factura
@@ -12,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adaptador: AppAdapter
 
     private var datos: MutableList<Factura> = mutableListOf()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,13 +40,14 @@ class MainActivity : AppCompatActivity() {
             FacturaList.setHasFixedSize(true)
         }
 
+
         binding.botonFactura.setOnClickListener {
             startActivity(Intent(this, FilterActivity::class.java))
         }
 
         /*binding.botonFactura.setOnClickListener{
             val dialog = DetailActivity()
-
+q
             dialog.show(supportFragmentManager, "customDialog")
         }*/
 
@@ -53,5 +58,10 @@ class MainActivity : AppCompatActivity() {
                 }
             ).show(supportFragmentManager, "dialog" )
         }*/
+
+        binding.prueba.setOnClickListener{ userFilter ->
+            val pagadasFiltered = datos.filter { factura ->  factura.descEstado.toLowerCase().contains(userFilter.toString().toLowerCase())}
+            adaptador.updateFacturas(pagadasFiltered as MutableList<Factura>)
+        }
     }
 }
