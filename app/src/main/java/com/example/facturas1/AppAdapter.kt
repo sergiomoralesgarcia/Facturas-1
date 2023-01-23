@@ -49,7 +49,9 @@ class AppAdapter (val datos: MutableList<Factura>): RecyclerView.Adapter<AppAdap
                 descEstado.text = factura.descEstado
                 importeOrdenacion. text = factura.importeOrdenacion.toString()
                 container?.setOnClickListener {
-                    //startActivity(Intent(this,DetailActivity::class.java))
+                    /*val dialog = DetailActivity()
+
+                    dialog.show(supportFragmentManager, "customDialog")*/
                 }
             }
 

@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#BABDBA">
+    android:background="#F0F3F0">
 
     <TextView
         android:id="@+id/infoPopup"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="65dp"
         android:layout_marginTop="0dp"
         android:hint="información"
         android:gravity="center"
