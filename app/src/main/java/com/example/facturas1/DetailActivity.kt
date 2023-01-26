@@ -26,28 +26,15 @@ class DetailActivity: DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val button: Button = view.findViewById(R.id.botonPopup)
 
+        // botón cerrar
+        val button: Button = view.findViewById(R.id.botonPopup)
         button.setOnClickListener{
             dismiss()
         }
     }
-
-
-
-    /*val alertDialog: AlertDialog? = activity?.let {
-        val builder = AlertDialog.Builder(it)
-        builder.apply {
-            setNegativeButton(R.string.etq_textoPopup,
-                DialogInterface.OnClickListener { dialog, id ->
-                    // User cancelled the dialog
-                })
-        }
-
-        // Create the AlertDialog
-        builder.create()
-    }*/
 }
+
 class Constants {
     companion object {
         const val FACTURE_TITLE_KEY = "FACTURE_TITLE_KEY"
@@ -74,17 +61,4 @@ class PopupActivity : AppCompatActivity() {
             context.startActivity(starter)
         }
     }
-
-
-    /*override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-
-        binding = ActivityDetailBinding.inflate(layoutInflater)
-
-        // Cierre de la ventana emergente cuando presione el botón
-        binding.botonPopup.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-        }
-    }*/
 }
