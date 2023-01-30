@@ -88,8 +88,6 @@ class FilterActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         binding.botonEliminar.setOnClickListener {
             startActivity(Intent(this, FilterActivity::class.java))
         }
-
-
     }
 
     // importaciones del SeekBar
