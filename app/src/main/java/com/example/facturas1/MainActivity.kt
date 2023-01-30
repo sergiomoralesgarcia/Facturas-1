@@ -3,6 +3,9 @@ package com.example.facturas1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.DialogFragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.facturas1.database.AppDatabase
 import com.example.facturas1.databinding.ActivityMainBinding
 import com.example.facturas1.entidades.Factura
@@ -10,6 +13,7 @@ import com.example.facturas1.entidades.Factura
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adaptador: AppAdapter
+    private lateinit var recyclerqView: RecyclerView
 
     private var datos: MutableList<Factura> = mutableListOf()
 
@@ -41,19 +45,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, FilterActivity::class.java))
         }
 
-        /*binding.botonFactura.setOnClickListener{
+        // abrir popup presionando en el contenedor del recycler
+        adaptador.onItemClick = {
             val dialog = DetailActivity()
 
             dialog.show(supportFragmentManager, "customDialog")
-        }*/
-
-        /*binding.botonFactura.setOnClickListener {
-            PopupActivity(
-                onSubmitClicLitener = {  quantity ->
-                    Toast.makeText(requireContext(), "fFFFFF", Toast.LENGTH_SHORT).show()
-                }
-            ).show(supportFragmentManager, "dialog" )
-        }*/
+        }
     }
 
     private fun navigateTo(factura: Any) {

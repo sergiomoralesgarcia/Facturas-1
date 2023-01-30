@@ -10,6 +10,7 @@ import com.example.facturas1.entidades.Factura
 
 class AppAdapter (var datos: MutableList<Factura>): RecyclerView.Adapter<AppAdapter.AppHolder>(){
 
+    var onItemClick : ((Factura) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppHolder {
         val inflador = LayoutInflater.from(parent.context)
@@ -20,6 +21,12 @@ class AppAdapter (var datos: MutableList<Factura>): RecyclerView.Adapter<AppAdap
 
     override fun onBindViewHolder(holder: AppHolder, position: Int) {
         holder.bindItem(datos[position])
+
+        // presionar en el contenedor del adapter
+        val factura = datos[position]
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(factura)
+        }
     }
 
     override fun getItemCount(): Int = datos.size
@@ -36,20 +43,8 @@ class AppAdapter (var datos: MutableList<Factura>): RecyclerView.Adapter<AppAdap
                 fecha.text = factura.fecha
                 descEstado.text = factura.descEstado
                 importeOrdenacion. text = factura.importeOrdenacion.toString()
-
-                // Contenedores del recycler presionables
-                container?.setOnClickListener {
-                    /*val dialog = DetailActivity()
-
-                    dialog.show(supportFragmentManager, "customDialog")*/
-                }
             }
         }
-        /*init {
-            itemView.setOnClickListener{
-                listener.onItemClick(adapterPosition)
-            }
-        }*/
     }
 
     fun updateFacturas(datos: MutableList<Factura>){
