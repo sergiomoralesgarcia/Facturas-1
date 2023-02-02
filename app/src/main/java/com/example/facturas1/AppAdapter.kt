@@ -2,7 +2,6 @@ package com.example.facturas1
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.AdapterView.OnItemClickListener
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.facturas1.databinding.ItemFacturaBinding

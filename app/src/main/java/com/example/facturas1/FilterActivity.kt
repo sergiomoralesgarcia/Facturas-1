@@ -4,12 +4,8 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.SyncStateContract.Helpers.update
-import android.util.Log
-import android.widget.Adapter
 import android.widget.SeekBar
 import android.widget.TextView
-import androidx.core.widget.addTextChangedListener
 import com.example.facturas1.databinding.ActivityFilterBinding
 import com.example.facturas1.entidades.Factura
 import java.util.*
@@ -96,6 +92,5 @@ class FilterActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
     }
 
     override fun onStartTrackingTouch(p0: SeekBar?) {}
-
     override fun onStopTrackingTouch(p0: SeekBar?) {}
 }

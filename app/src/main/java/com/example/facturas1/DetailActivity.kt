@@ -26,7 +26,6 @@ class DetailActivity: DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         // botón cerrar
         val button: Button = view.findViewById(R.id.botonPopup)
         button.setOnClickListener{

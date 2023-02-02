@@ -3,8 +3,6 @@ package com.example.facturas1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.DialogFragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.facturas1.database.AppDatabase
 import com.example.facturas1.databinding.ActivityMainBinding
