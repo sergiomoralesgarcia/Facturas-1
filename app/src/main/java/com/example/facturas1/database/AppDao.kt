@@ -10,7 +10,4 @@ interface AppDao {
     @Query("SELECT * FROM factura")
     fun getAll(): MutableList<Factura>
 
-    /*@GET("8RFY")
-    fun getCourse(): Call<Factura?>?*/
-
 }
