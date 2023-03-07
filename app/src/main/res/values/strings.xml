@@ -4,6 +4,7 @@
     <string name="etq_marca">Pagada</string>
     <string name="etq_importe">21.12</string>
 
+    <!--  -->
     <string name="etq_tituloPopup">Información</string>
     <string name="etq_textoPopup">Esta funcionalidad no está disponible</string>
     <string name="etq_cerrarPopup">Cerrar</string>
